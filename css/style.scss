@@ -141,15 +141,92 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: rgb(103, 106, 255);
+            background: linear-gradient(to bottom, #0181f5 0%, #5db2ff 100%);
             width: 100px;
             height: 100px;
             border-radius: 50px;
+            &:nth-child(even) {
+                background: linear-gradient(to bottom, #00d363 0%, #37ef8d 100%);
+            }
         }
 
         &-text {
-            width: 300px;
+            width: 70%;
             line-height: 1.5;
+        }
+    }
+}
+
+.about-us {
+    &__container {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__description {
+        width: 400px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    &__text {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    &__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        color: #040404;
+    }
+
+    &__img {
+        line-height: 0;
+        img {
+            border-radius: 8px;
+            max-width: 600px;
+        }
+    }
+}
+
+
+.our-partners {
+    &__container {
+        margin-top: 100px;
+    }
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__slider {
+        margin-top: 50px;
+        overflow: hidden;
+        &-wrapper {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        text-align: center;
+        line-height: 0;
+        img {
+            width: 200px;
         }
     }
 }
@@ -181,6 +258,20 @@ body {
         &__btn {
             width: 150px;
             height: 50px;
+        }
+    }
+
+    .about-us {
+        &__container {
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__img {
+            img {
+                width: 100%;
+            }
         }
     }
 }
