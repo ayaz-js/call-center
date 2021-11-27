@@ -1,0 +1,218 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header__contact {
+  background-color: #f3f3f3;
+}
+
+.header__contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-block: 10px;
+}
+
+.header__contact-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.header__contact a {
+  color: #000;
+}
+
+.header__menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 20px;
+}
+
+.header__menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__menu-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #676aff;
+  width: 110px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.header__menu-faq {
+  color: #fff !important;
+}
+
+.header__menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+.slider__wrapper {
+  position: relative;
+}
+
+.slider__wrapper::before {
+  content: '';
+  position: absolute;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.slider__img {
+  line-height: 0;
+}
+
+.slider__img img {
+  width: 100%;
+}
+
+.slider__description {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: #fff;
+  font-size: 40px;
+}
+
+.slider__btn {
+  background-color: #676aff;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+}
+
+.service__title {
+  text-align: center;
+  font-size: 40px;
+  margin-block: 60px;
+  font-weight: 300;
+}
+
+.service__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.service__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+}
+
+.service__item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #676aff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.service__item-text {
+  width: 300px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .header__contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .header__menu-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .slider__title {
+    font-size: 20px;
+  }
+  .slider__btn {
+    width: 150px;
+    height: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
