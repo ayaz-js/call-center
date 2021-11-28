@@ -139,7 +139,8 @@ function sliderCreate() {
 sliderCreate();
 // Render Partner Logo End
 
-function accardion() {
+// Faq Accaridon Render
+function accardionCreate() {
     const faqBtn = document.querySelectorAll('.faq__accardion-btn');
     const faqPanelClass = 'faq__accardion-panel-active';
     const faqBtnActive = 'faq__accardion-btn-active';
@@ -159,4 +160,68 @@ function accardion() {
     }
 }
 
-accardion();
+accardionCreate();
+// Faq Accardion Render End
+
+
+// Testimonials Render
+function testimonialsCreate() {
+    const testimonialsBlock = document.querySelector('.testimonials__slider-wrapper');
+
+    // Testimonials Collection
+    const testimonialsItems = [{
+            testimonialsText: 'Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.',
+            testimonialsImg: 'img/human-1.png',
+            testimonialsName: 'Fiona Gallager',
+        },
+        {
+            testimonialsText: 'Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.',
+            testimonialsImg: 'img/human-1.png',
+            testimonialsName: 'Fiona Gallager',
+        },
+        {
+            testimonialsText: 'Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.',
+            testimonialsImg: 'img/human-1.png',
+            testimonialsName: 'Fiona Gallager',
+        },
+    ];
+
+    const testimonialsTemplate = ({
+        testimonialsTitle,
+        testimonialsImg,
+        testimonialsName
+    }) => {
+        return `
+            <div class="testimonials__slider-item swiper-slide">
+                <h3 class="testimonials__text">
+                    Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
+                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  
+                </h3>
+                <div class="testimonials__img">
+                    <img src="img/human-1.png" alt="">
+                </div>
+                <p class="testimonials__name">Fiona Gallager</p>
+            </div>
+            `;
+        }
+
+    let testimonialsTemplateString = '';
+    testimonialsItems.forEach(items => {
+        testimonialsTemplateString += testimonialsTemplate(items)
+    })
+
+    testimonialsBlock.innerHTML = testimonialsTemplateString;
+
+
+    var swiper = new Swiper('.testimonials__slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+            clickable: true,
+        },
+    });
+}
+
+testimonialsCreate();
+// Testimonials End

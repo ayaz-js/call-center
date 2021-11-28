@@ -13,7 +13,7 @@ body {
 .header {
 
     &__contact {
-        background-color: #f3f3f3;
+        background-color: #f5f0dd;
 
         &-container {
             display: flex;
@@ -152,6 +152,7 @@ body {
             width: 100px;
             height: 100px;
             border-radius: 50px;
+
             &:nth-child(even) {
                 background: linear-gradient(to bottom, #00d363 0%, #37ef8d 100%);
             }
@@ -210,6 +211,7 @@ body {
         border-radius: 50px;
         font-size: 20px;
         transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
         &:hover {
             background: #000;
             color: #fff;
@@ -218,6 +220,7 @@ body {
 
     &__img {
         line-height: 0;
+
         img {
             border-radius: 8px;
             max-width: 600px;
@@ -229,6 +232,7 @@ body {
     &__container {
         margin-top: 100px;
     }
+
     &__title {
         font-size: 40px;
         font-weight: 300;
@@ -238,6 +242,7 @@ body {
     &__slider {
         margin-top: 50px;
         overflow: hidden;
+
         &-wrapper {
             display: flex;
             align-items: center;
@@ -247,6 +252,7 @@ body {
     &__img {
         text-align: center;
         line-height: 0;
+
         img {
             width: 200px;
         }
@@ -267,6 +273,7 @@ body {
 
     &__img {
         line-height: 0;
+
         img {
             width: 600px;
             border-radius: 8px;
@@ -284,12 +291,14 @@ body {
             font-size: 18px;
             margin-block: 10px;
             cursor: pointer;
+
             &::before {
                 content: '+';
                 position: absolute;
                 top: 0;
                 right: 32%;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -300,8 +309,10 @@ body {
                 left: 0;
             }
         }
+
         &-btn-active {
             position: relative;
+
             &::before {
                 content: '-';
                 position: absolute;
@@ -309,6 +320,7 @@ body {
                 right: 32%;
             }
         }
+
         &-panel {
             visibility: hidden;
             transition: opacity 0.5s ease;
@@ -323,6 +335,119 @@ body {
             visibility: visible;
             opacity: 1;
             height: auto;
+        }
+    }
+}
+
+.testimonials {
+    &__container {
+        margin-top: 100px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    &__slider {
+        overflow: hidden;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        width: 50%;
+    }
+}
+
+.call-back {
+    margin-top: 100px;
+    background: #f5f0dd;
+
+    &__container {
+        padding-block: 50px;
+    }
+
+    &__description {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 10px;
+        text-align: center;   
+    }
+
+    &__phone {
+        padding-left: 15px;
+        width: 400px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        color: #737373;
+        font-size: 20px;
+    }
+
+    &__set {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 215px;
+        height: 50px;
+        background: #ff2d2d;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        transition: 0.5s ease;
+
+        &:hover {
+            background: #ff6d6d;
+        }
+    }
+}
+
+.footer {
+    background: #313030;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 25px;
+        color: #fff;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    &__items {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__link {
+        color: #fff;
+        transition: 0.5s ease;
+
+        &::hover {
+            color: #ff6d6d;
         }
     }
 }
