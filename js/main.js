@@ -138,3 +138,25 @@ function sliderCreate() {
 
 sliderCreate();
 // Render Partner Logo End
+
+function accardion() {
+    const faqBtn = document.querySelectorAll('.faq__accardion-btn');
+    const faqPanelClass = 'faq__accardion-panel-active';
+    const faqBtnActive = 'faq__accardion-btn-active';
+
+    for (let value of faqBtn) {
+      value.addEventListener('click', () => {
+        value.classList.toggle(faqBtnActive);
+        let faqPanel = value.nextElementSibling;
+    
+        if (faqPanel.classList.contains(faqPanelClass)) {
+          faqPanel.classList.remove(faqPanelClass);
+        } else {
+          faqPanel.classList.add(faqPanelClass);
+        }
+    
+      });
+    }
+}
+
+accardion();

@@ -19,6 +19,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -29,6 +32,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 16px;
+}
+
+.header__contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
 
@@ -230,12 +243,36 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 
 .about-us__link {
-  text-decoration: underline;
+  text-decoration: none;
   color: #040404;
+}
+
+.about-us__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #040404;
+  border-radius: 50px;
+  font-size: 20px;
+  -webkit-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.about-us__item:hover {
+  background: #000;
+  color: #fff;
 }
 
 .about-us__img {
@@ -278,6 +315,86 @@ body {
 
 .our-partners__img img {
   width: 200px;
+}
+
+.faq__container {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.faq__title {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.faq__img {
+  line-height: 0;
+}
+
+.faq__img img {
+  width: 600px;
+  border-radius: 8px;
+}
+
+.faq__accardion-btn {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  margin-block: 10px;
+  cursor: pointer;
+}
+
+.faq__accardion-btn::before {
+  content: '+';
+  position: absolute;
+  top: 0;
+  right: 32%;
+}
+
+.faq__accardion-btn::after {
+  content: '';
+  position: absolute;
+  background: #a9a9a9;
+  width: 70%;
+  height: 1px;
+  top: 30px;
+  left: 0;
+}
+
+.faq__accardion-btn-active {
+  position: relative;
+}
+
+.faq__accardion-btn-active::before {
+  content: '-';
+  position: absolute;
+  top: 0;
+  right: 32%;
+}
+
+.faq__accardion-panel {
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  height: 0;
+  padding: 10px;
+  width: 65%;
+  color: #424242;
+}
+
+.faq__accardion-panel-active {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
