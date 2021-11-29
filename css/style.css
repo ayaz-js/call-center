@@ -213,7 +213,7 @@ body {
 }
 
 .about-us__description {
-  width: 400px;
+  max-width: 600px;
 }
 
 .about-us__title {
@@ -323,12 +323,16 @@ body {
   font-weight: 300;
 }
 
+.faq__description {
+  max-width: 600px;
+}
+
 .faq__img {
   line-height: 0;
 }
 
 .faq__img img {
-  width: 600px;
+  max-width: 600px;
   border-radius: 8px;
 }
 
@@ -552,6 +556,9 @@ body {
   .service__container {
     padding: 10px;
   }
+  .service__item {
+    width: 45%;
+  }
   .slider__description {
     top: 50%;
   }
@@ -580,6 +587,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px;
   }
   .faq__img {
@@ -589,17 +599,20 @@ body {
     width: 100%;
     border-radius: 8px;
   }
+  .faq__accardion-btn {
+    color: #000;
+  }
   .faq__accardion-btn::before {
     content: '+';
     position: absolute;
     top: 0;
-    right: 8%;
+    right: 1%;
   }
   .faq__accardion-btn::after {
     content: '';
     position: absolute;
     background: #a9a9a9;
-    width: 95%;
+    width: 100%;
     height: 1px;
     top: 30px;
     left: 50%;
@@ -607,13 +620,15 @@ body {
             transform: translate(-50%, -50%);
   }
   .faq__accardion-panel {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 90%;
   }
   .faq__accardion-btn-active::before {
     content: '-';
     position: absolute;
     top: 0;
-    right: 8%;
+    right: 1%;
   }
   .testimonials__text {
     width: 90%;
@@ -639,6 +654,15 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .slider__btn {
+    font-size: 16px;
+  }
+  .service__item {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
