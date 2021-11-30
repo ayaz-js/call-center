@@ -1,3 +1,16 @@
+function faqScrollBtn() {
+    const faqBtn = document.querySelector('.header__menu-faq');
+    const faqSection = document.querySelector('.faq');
+    faqBtn.addEventListener('click', () => {
+        faqSection.scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        });
+    })
+}
+
+faqScrollBtn();
+
 // Redner Service Items
 function serviceItemsCreate() {
     const serviceItemsBlock = document.querySelector('.service__items');
@@ -146,17 +159,17 @@ function accardionCreate() {
     const faqBtnActive = 'faq__accardion-btn-active';
 
     for (let value of faqBtn) {
-      value.addEventListener('click', () => {
-        value.classList.toggle(faqBtnActive);
-        let faqPanel = value.nextElementSibling;
-    
-        if (faqPanel.classList.contains(faqPanelClass)) {
-          faqPanel.classList.remove(faqPanelClass);
-        } else {
-          faqPanel.classList.add(faqPanelClass);
-        }
-    
-      });
+        value.addEventListener('click', () => {
+            value.classList.toggle(faqBtnActive);
+            let faqPanel = value.nextElementSibling;
+
+            if (faqPanel.classList.contains(faqPanelClass)) {
+                faqPanel.classList.remove(faqPanelClass);
+            } else {
+                faqPanel.classList.add(faqPanelClass);
+            }
+
+        });
     }
 }
 
@@ -197,13 +210,13 @@ function testimonialsCreate() {
                     Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor
                     sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  
                 </h3>
-                <div class="testimonials__img">
+                <div class="testimonials__avatar">
                     <img src="img/human-1.png" alt="">
                 </div>
                 <p class="testimonials__name">Fiona Gallager</p>
             </div>
             `;
-        }
+    }
 
     let testimonialsTemplateString = '';
     testimonialsItems.forEach(items => {
