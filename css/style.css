@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
 }
 
 .header__contact {
-  background-color: #f5f0dd;
+  background: #f5f0dd;
 }
 
 .header__contact-container {
@@ -73,7 +73,7 @@ body {
 }
 
 .header__menu-faq {
-  background-color: #676aff;
+  background: #92e3a9;
   color: #fff;
   border-radius: 8px;
   border: none;
@@ -88,18 +88,15 @@ body {
 }
 
 .slider__wrapper {
-  position: relative;
-}
-
-.slider__wrapper::before {
-  content: '';
-  position: absolute;
-  background: #000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider__img {
@@ -107,27 +104,22 @@ body {
 }
 
 .slider__img img {
-  width: 100%;
+  width: 600px;
 }
 
-.slider__description {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  color: #fff;
+.slider__title {
   font-size: 40px;
 }
 
 .slider__btn {
-  background-color: #676aff;
+  background-color: #92e3a9;
   color: #fff;
   font-size: 20px;
   border: none;
   border-radius: 8px;
   width: 200px;
   height: 60px;
+  cursor: pointer;
 }
 
 .service__title {
@@ -143,9 +135,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -196,11 +188,15 @@ body {
 
 .service__item-text {
   width: 70%;
+  font-size: 14px;
   line-height: 1.5;
 }
 
-.about-us__container {
+.about-us {
   margin-top: 100px;
+}
+
+.about-us__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,6 +221,10 @@ body {
   display: block;
   font-size: 18px;
   margin-bottom: 30px;
+}
+
+.about-us__text a {
+  color: #92E3A9 !important;
 }
 
 .about-us__items {
@@ -272,44 +272,10 @@ body {
 
 .about-us__img img {
   border-radius: 8px;
-  max-width: 600px;
-}
-
-.our-partners__container {
-  margin-top: 100px;
-}
-
-.our-partners__title {
-  font-size: 40px;
-  font-weight: 300;
-  text-align: center;
-}
-
-.our-partners__slider {
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-.our-partners__slider-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.our-partners__img {
-  text-align: center;
-  line-height: 0;
-}
-
-.our-partners__img img {
-  width: 200px;
+  width: 600px;
 }
 
 .faq__container {
-  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,7 +298,7 @@ body {
 }
 
 .faq__img img {
-  max-width: 600px;
+  width: 600px;
   border-radius: 8px;
 }
 
@@ -364,10 +330,6 @@ body {
   left: 0;
 }
 
-.faq__accardion-btn-active {
-  position: relative;
-}
-
 .faq__accardion-btn-active::before {
   content: '-';
   position: absolute;
@@ -381,7 +343,7 @@ body {
   transition: opacity 0.5s ease;
   opacity: 0;
   height: 0;
-  padding: 10px;
+  padding: 0px;
   width: 65%;
   color: #424242;
 }
@@ -392,7 +354,7 @@ body {
   height: auto;
 }
 
-.testimonials__container {
+.testimonials {
   margin-top: 100px;
 }
 
@@ -441,6 +403,22 @@ body {
   font-weight: 300;
 }
 
+.call-back__text {
+  display: block;
+}
+
+.call-back__number {
+  background-color: #92e3a9;
+  color: #fff;
+  font-size: 20px;
+  width: 215px;
+  height: 50px;
+  margin-block: 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .call-back__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,7 +429,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
   gap: 10px;
   text-align: center;
 }
@@ -546,29 +523,27 @@ body {
             align-items: center;
     gap: 20px;
   }
-  .header__menu-container {
+  .header__menu {
+    display: none;
+  }
+  .slider__wrapper {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 20px;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .slider__description {
+    padding-bottom: 30px;
+  }
+  .slider__btn {
+    width: 100%;
+    height: 40px;
   }
   .service__container {
     padding: 10px;
   }
   .service__item {
     width: 45%;
-  }
-  .slider__description {
-    top: 50%;
-  }
-  .slider__title {
-    font-size: 20px;
-  }
-  .slider__btn {
-    width: 120px;
-    height: 26px;
-    border-radius: 4px;
   }
   .about-us__container {
     margin-top: 20px;
@@ -579,25 +554,15 @@ body {
             flex-direction: column;
     gap: 20px;
   }
-  .about-us__img img {
-    width: 100%;
-  }
   .faq__container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     padding: 10px;
-  }
-  .faq__img {
-    line-height: 0;
-  }
-  .faq__img img {
-    width: 100%;
-    border-radius: 8px;
   }
   .faq__accardion-btn {
     color: #000;
@@ -633,6 +598,9 @@ body {
   .testimonials__text {
     width: 90%;
   }
+  .call-back__number {
+    width: 80%;
+  }
   .call-back__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -658,10 +626,32 @@ body {
 }
 
 @media screen and (max-width: 425px) {
+  .slider__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .slider__description {
+    padding-bottom: 30px;
+  }
+  .slider__title {
+    font-size: 36px;
+  }
+  .slider__img img {
+    width: 100%;
+  }
   .slider__btn {
-    font-size: 16px;
+    width: 100%;
+    height: 40px;
   }
   .service__item {
+    width: 100%;
+  }
+  .about-us__img img {
+    width: 100%;
+  }
+  .faq__img img {
     width: 100%;
   }
 }
